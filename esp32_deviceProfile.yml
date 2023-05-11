@@ -1,0 +1,56 @@
+name: esp-monitor-profile
+manufacturer: Arduino
+description: esp and dht11 monitor profile
+model: ESP32
+labels: [Temperature, Humidity, dht11]
+deviceResources:
+- description: The temperature value in Home
+  name: Temperature
+  isHidden: false
+  tag: ""
+  properties:
+    valueType: Float64
+    readWrite: RW
+    units: "degree C"
+    minimum: ""
+    maximum: ""
+    defaultValue: "0.0"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes: {}
+- description: The Humidity value in Home
+  name: Humidity
+  isHidden: false
+  tag: ""
+  properties:
+    valueType: Float64
+    readWrite: RW
+    units: "Percent %"
+    minimum: ""
+    maximum: ""
+    defaultValue: "0.0"
+    mask: ""
+    shift: ""
+    scale: ""
+    offset: ""
+    base: ""
+    assertion: ""
+    mediaType: ""
+  attributes: {}
+deviceCommands:
+- name: measure
+  isHidden: false
+  readWrite: RW
+  resourceOperations:
+  - deviceResource: Temperature
+    defaultValue: ""
+    mappings: {}
+  - deviceResource: Humidity
+    defaultValue: ""
+    mappings: {}
+
